@@ -4,11 +4,7 @@ import LoginView from '../views/login/LoginView.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
-    {
-      path: '/login',
-      name: '登录页',
-      component: LoginView
-    },
+    { path: '/login', name: '登录', component: LoginView },
     {
       path: '/register',
       name: '注册',
@@ -24,34 +20,21 @@ const router = createRouter({
       name: '锁屏',
       component: () => import('../views/lock-screen/LockScreen.vue')
     },
-    {
-      path: '/',
-      name: '首页',
-      component: () => import('../views/home/AtHome.vue')
-    },
+    { path: '/', name: '首页', component: () => import('../views/home/HomeView.vue') },
     {
       path: '/product',
       name: '产品管理',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: () => import('../views/product/list/ProductList.vue')
     },
-    {
-      path: '/order',
-      name: '订单管理',
-      component: () => import('../views/order/AtOrder.vue')
-    },
-    // {
-    //   path: '/',
-    //   name: '广告分类',
-    //   component: HomeView
-    // },
+    { path: '/order', name: '订单管理', component: () => import('../views/order/OrderView.vue') },
     {
       path: '/system',
       name: '系统管理',
-      component: () => import('../views/system/AtSystem.vue')
-    }
+      component: () => import('../views/system/SystemView.vue')
+    },
+    { path: '/500', name: '500', component: () => import('../views/error/500View.vue') },
+    { path: '/403', name: '403', component: () => import('../views/error/403View.vue') },
+    { path: '/:pathMatch(.*)*', name: '404', component: () => import('../views/error/404View.vue') }
   ]
 })
 
