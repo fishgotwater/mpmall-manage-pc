@@ -180,11 +180,11 @@ const routerJump = (p: string) => {
     font-size: 0.9575rem;
 }
 
-::v-deep .el-form-item__content {
+:deep(.el-form-item__content) {
     justify-content: space-between;
 }
 
-::v-deep .el-input-group__append button.el-button:hover {
+:deep(.el-input-group__append button.el-button:hover) {
     color: #409eff;
 }
 
