@@ -32,6 +32,11 @@ const router = createRouter({
       name: '系统管理',
       component: () => import('../views/system/SystemView.vue')
     },
+    {
+      path: '/store',
+      name: '数据仓库',
+      component: () => import('../views/store/StoreView.vue')
+    },
     { path: '/500', name: '500', component: () => import('../views/error/500View.vue') },
     { path: '/403', name: '403', component: () => import('../views/error/403View.vue') },
     { path: '/:pathMatch(.*)*', name: '404', component: () => import('../views/error/404View.vue') }

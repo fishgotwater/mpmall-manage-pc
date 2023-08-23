@@ -160,6 +160,7 @@ const routerJump = (p: string) => {
 .colWrapper {
     background: #ffffff;
     padding: 3rem;
+    opacity: 0.95;
 }
 
 .brand {
